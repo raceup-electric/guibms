@@ -1,0 +1,16 @@
+name: bms_ui
+description: Cross‑platform BMS monitoring app
+publish_to: none
+version: 1.0.0
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+  flutter: '>=3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  web_socket_channel: ^3.0.3
+  flutter_libserialport: ^0.5.0
+
+flutter:
+  uses-material-design: true

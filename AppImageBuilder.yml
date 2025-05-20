@@ -1,0 +1,42 @@
+version: 1
+
+AppDir:
+  path: AppDir
+  app_info:
+    id: com.gui.guibms
+    name: GUIBMS
+    version: 1.0.0
+    icon: bms-icon.png
+    exec: usr/bin/guibms
+
+  runtime:
+    env:
+      PATH: /usr/bin:/home/arch/.pyenv/shims:/home/arch/flutter/bin:/home/arch/flutter/bin/cache/dart-sdk/bin:/home/arch/android-sdk/cmdline-tools/latest/bin:/home/arch/android-sdk/emulator:/home/arch/android-sdk/platform-tools:/home/arch/.cargo/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/arch/.rvm/bin:/home/arch/.rvm/bin
+
+apt:
+  arch: amd64
+  sources:
+    - sourceline: 'deb http://archive.ubuntu.com/ubuntu/ focal main universe'
+  include:
+    - libgtk-3-0
+    - libgdk-3-0
+    - libstdc++6
+    - libx11-6
+    - libpangocairo-1.0-0
+    - libcairo2
+    - libatk1.0-0
+    - libgdk-pixbuf2.0-0
+    - libpango-1.0-0
+    - libxkbcommon0
+    - libxi6
+    - libxcb1
+    - libxext6
+    - zlib1g
+    - libglib2.0-0
+    - libgcc1
+
+files:
+  include:
+    - path: build/linux/x64/release/bundle/lib/*.so
+      destination: usr/lib/
+
